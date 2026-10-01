@@ -5,6 +5,7 @@
   --secondary: rgba(254, 82, 68, 1);
   --tertiary: rgba(77, 77, 77, 1);
   --accent: rgba(63, 177, 181, 1);
+  --accent-2: rgb(255, 107, 107);
   --background: rgba(247, 247, 247, 1);
   --foreground: rgba(0, 0, 0, 1);
 
@@ -21,6 +22,7 @@
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
   --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

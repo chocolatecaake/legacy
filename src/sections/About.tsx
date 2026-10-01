@@ -1,7 +1,7 @@
 export function About() {
   return (
     <section className="bg-primary">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-section">
+      <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-small">
         <h1 className="flex-1">
           <div className="underline">Unlock Your Potential</div> with
           Communication Coaching
