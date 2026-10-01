@@ -15,12 +15,12 @@ export default function Footer() {
                 <span className="flex body-large items-center">
                   <LucidePhone className="inline mr-small w-4" />
                   <div>
-                    <p>+971 50 259 7150</p>
+                    <p>+971 12 121 1231</p>
                   </div>
                 </span>
                 <span>
                   <Mail className="inline w-4 mr-small text-white" />
-                  info@skytechuae.com
+                  legacy@gmai.com
                 </span>
               </div>
             </div>
