@@ -6,7 +6,10 @@ import { ArrowUp } from "lucide-react";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-black w-full text-white px-small sm:px-content">
+      <footer
+        id="footer"
+        className="bg-black w-full text-white px-small sm:px-content"
+      >
         <div className="flex justify-between py-default px-small sm:px-default">
           <div className="flex flex-col sm:flex-row gap-section">
             <div className="flex flex-col space-y-default lg:min-w-55">
@@ -39,9 +42,12 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex w-fit h-fit p-3 bg-secondary rounded">
+          <a
+            className="flex w-fit h-fit p-3 bg-secondary rounded hover:bg-accent-2"
+            href="#home"
+          >
             <ArrowUp className="text-black" />
-          </div>
+          </a>
         </div>
       </footer>
       <div className="w-full flex flex-col md:flex-row bg-primary p-1 justify-center items-center">

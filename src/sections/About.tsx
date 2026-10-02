@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary" id="vision">
       <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-small">
         <h1 className="flex-1">
           <div className="underline">Unlock Your Potential</div> with

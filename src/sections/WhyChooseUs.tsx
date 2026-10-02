@@ -10,7 +10,10 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="bg-white flex flex-col md:!flex-row md:!gap-section justify-center items-center md:!pl-0">
+    <section
+      id="cta"
+      className="bg-white flex flex-col lg:!flex-row lg:!gap-section justify-center items-center lg:!pl-0"
+    >
       <Image
         src="/assets/confidentSpeaker.webp"
         alt="girl sitting on a desk"

@@ -161,6 +161,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: clamp(24px, 4vw, var(--spacing-content-base));
+  scroll-margin-top: 70px;
 }
 
 .card {

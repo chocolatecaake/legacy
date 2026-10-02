@@ -5,7 +5,7 @@ import Image from "next/image";
 export function Values() {
   return (
     <section className="bg-white">
-      <div className="flex flex-col md:flex-row gap-default">
+      <div className="grid grid-cols-1 gap-default sm:grid-cols-2 xl:grid-cols-6">
         {valueList.map((value, idx) => (
           <ValueCard key={idx} variant={idx} desc={value} />
         ))}

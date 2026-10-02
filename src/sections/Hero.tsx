@@ -11,7 +11,10 @@ export default function Hero() {
     "Personalised Development",
   ];
   return (
-    <section className="flex !flex-col space-y-default md:!flex-row justify-between">
+    <section
+      id="home"
+      className="flex flex-col space-y-default items-center xl:!flex-row xl:justify-between"
+    >
       <div className="bg-background space-y-content md:max-w-lg">
         <div className="space-y-default">
           <div className="hero">
@@ -27,26 +30,15 @@ export default function Hero() {
           ))}
         </div>
         <div className="flex flex-col sm:flex-row gap-small">
-          <Button text="See Our Services" variant="secondary" href="/" />
-          <Button text="Contact Us" href="/" />
+          <Button
+            text="See Our Services"
+            variant="secondary"
+            href="#services"
+          />
+          <Button text="Contact Us" href="#footer" />
         </div>
       </div>
-      <div
-        className="
-            right-[-25%]
-            top-[-30%]
-            z-0
-            rounded-[50%]
-            bg-[#eeeeee]
-        "
-      >
-        <Image
-          src="/assets/pop1.png"
-          alt="hero image"
-          height={600}
-          width={600}
-        />
-      </div>
+      <Image src="/assets/pop2.png" alt="hero image" height={600} width={600} />
     </section>
   );
 }

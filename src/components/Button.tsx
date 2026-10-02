@@ -10,7 +10,7 @@ export default function Button({
   href,
 }: ButtonProps) {
   const variants = {
-    cta: "bg-secondary text-black font-semibold hover:bg-secondary hover:text-black",
+    cta: "bg-secondary text-black font-semibold hover:bg-accent-2 hover:text-black",
     primary: "bg-black text-white hover:bg-secondary hover:text-black",
     secondary:
       "bg-background text-black border-2 hover:border-secondary hover:text-secondary",

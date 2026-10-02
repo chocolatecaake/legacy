@@ -1,19 +1,19 @@
 export const links = [
   {
     name: "Home",
-    path: "/",
+    path: "#home",
   },
   {
     name: "Our Vision",
-    path: "/vision",
+    path: "#vision",
   },
   {
     name: "Our Services",
-    path: "/services",
+    path: "#service",
   },
   {
     name: "Why Choose Us",
-    path: "/cta",
+    path: "#cta",
   },
   // {
   //   name: "Tester",

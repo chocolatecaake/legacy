@@ -3,7 +3,7 @@ import ServiceCard from "@/components/ServiceCard";
 
 export default function Services() {
   return (
-    <section>
+    <section id="service">
       <div className="flex flex-col bg-background space-y-default">
         <h1>Our Services</h1>
         <p className="body-lg max-w-md">

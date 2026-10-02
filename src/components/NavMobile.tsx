@@ -18,10 +18,36 @@ import { links } from "@/constants/navigation";
 import { usePathname } from "next/navigation";
 import { Star } from "lucide-react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0,
+      },
+    );
+
+    links.forEach((link) => {
+      const section = document.querySelector(link.path);
+
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -45,24 +71,25 @@ const NavMobile = () => {
             </SheetDescription>
           </SheetHeader>
           <ul className="flex flex-col gap-10 p-8 justify-center text-left">
-            {links.map((link, index) => {
+            {links.map((link) => {
               return (
-                <li
-                  key={index}
-                  className={`font-semibold transition-colors ${
-                    pathname === link.path
-                      ? "text-secondary"
-                      : "hover:text-secondary"
-                  }`}
-                >
-                  <Link href={link.path} onClick={() => setIsOpen(false)}>
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={
+                      activeSection === link.path.substring(1)
+                        ? "font-semibold text-accent-2"
+                        : "hover:text-secondary"
+                    }
+                  >
                     {link.name}
                   </Link>
                 </li>
               );
             })}
             <div onClick={() => setIsOpen(false)}>
-              <Button text="Contact Us" variant="primary" href="/contact" />
+              <Button text="Contact Us" variant="primary" href="#footer" />
             </div>
           </ul>
         </div>
