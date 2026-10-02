@@ -1,8 +1,11 @@
+"use client";
+
 import { Smile } from "lucide-react";
 import Stat from "@/components/Stat";
-import { stat } from "fs";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/variants";
 
 export default function Hero() {
   const stats = [
@@ -17,18 +20,37 @@ export default function Hero() {
     >
       <div className="bg-background space-y-content md:max-w-lg">
         <div className="space-y-default">
-          <div className="hero">
+          <motion.div
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.0 }}
+            className="hero"
+          >
             Master the Art of{" "}
             <span className="hero text-secondary">Communication</span> with
             Legacy
-          </div>
-          <h4>Empowering Students to Communicate with Confidence</h4>
+          </motion.div>
+          <motion.h4
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.0 }}
+          >
+            Empowering Students to Communicate with Confidence
+          </motion.h4>
         </div>
-        <div className="flex flex-col md:flex-row gap-small">
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.0 }}
+          className="flex flex-col md:flex-row gap-small"
+        >
           {stats.map((stat, idx) => (
             <Stat key={idx} Icon={Smile} desc={stat} />
           ))}
-        </div>
+        </motion.div>
         <div className="flex flex-col sm:flex-row gap-small">
           <Button
             text="See Our Services"

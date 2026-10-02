@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { cardVariants } from "@/constants/variants";
 import { serviceList } from "@/constants/services";
 import ServiceCard from "@/components/ServiceCard";
 
@@ -14,8 +18,13 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 gap-[48px] sm:grid-cols-2 xl:grid-cols-6">
         {serviceList.map((service, idx) => (
-          <div
+          <motion.div
             key={idx}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            custom={idx}
             className={`xl:col-span-2 ${idx === 3 ? "xl:col-start-2" : ""}`}
           >
             <ServiceCard
@@ -23,7 +32,7 @@ export default function Services() {
               title={service.title}
               desc={service.desc}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

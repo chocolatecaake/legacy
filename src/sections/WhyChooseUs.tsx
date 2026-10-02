@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Stat from "@/components/Stat";
 import { Smile } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/variants";
 
 export default function WhyUs() {
   const values = [
@@ -20,7 +24,13 @@ export default function WhyUs() {
         width={400}
         height={400}
       />
-      <div className="space-y-content">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="space-y-content"
+      >
         <div className="space-y-default">
           <h1>Crafting Confident communicators</h1>
           <div className="space-y-small">
@@ -47,7 +57,7 @@ export default function WhyUs() {
             <Stat key={idx} Icon={Smile} desc={value} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
