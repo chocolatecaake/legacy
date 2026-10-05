@@ -77,7 +77,6 @@ export default function TestPage() {
         <TestimonialCard content="Tailored coaching to help individuals become confident, persuasive public speakers, capable of delivering impactful presentations." />
         <Button text="see our services" href="/" />
         <Button text="see our services" href="/" variant="secondary" />
-        <Stat Icon={Smile} desc="Confident speakers" />
         <ValueCard variant={0} desc="Cultivate Strong Communication Skills" />
         <ValueCard variant={1} desc="Cultivate Strong Communication Skills" />
       </section>
