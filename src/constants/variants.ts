@@ -1,4 +1,8 @@
-export const fadeIn = (direction, delay) => {
+import { Variants } from "framer-motion";
+
+type Direction = "up" | "down" | "left" | "right";
+
+export const fadeIn = (direction: Direction, delay: number): Variants => {
   return {
     hidden: {
       y: direction === "up" ? 50 : direction === "down" ? -50 : 0,
@@ -20,7 +24,7 @@ export const fadeIn = (direction, delay) => {
   };
 };
 
-export const cardVariants = {
+export const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 30,
