@@ -52,11 +52,7 @@ export default function Hero() {
           ))}
         </motion.div>
         <div className="flex flex-col sm:flex-row gap-small">
-          <Button
-            text="See Our Services"
-            variant="secondary"
-            href="#services"
-          />
+          <Button text="See Our Services" variant="secondary" href="#service" />
           <Button text="Contact Us" href="#footer" />
         </div>
       </div>
