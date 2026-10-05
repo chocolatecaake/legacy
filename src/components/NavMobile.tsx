@@ -11,11 +11,9 @@ import {
 
 import Button from "./Button";
 
-import Image from "next/image";
 import { useState } from "react";
 import { MenuIcon } from "lucide-react";
 import { links } from "@/constants/navigation";
-import { usePathname } from "next/navigation";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -57,20 +55,20 @@ const NavMobile = () => {
       >
         <MenuIcon />
       </SheetTrigger>
-      <SheetContent className="bg-background border-none">
+      <SheetContent className="bg-black border-none">
         <div>
           <SheetHeader>
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-            <Link href="/">
-              <div className="w-fit border border-white flex p-2 p-2 rounded-full items-center justify-center bg-black">
-                <Star className="fill-white stroke-white" />
+            <Link href="#home">
+              <div className="w-fit border border-white flex p-2 p-2 rounded-full items-center justify-center bg-white">
+                <Star className="fill-black stroke-white" />
               </div>
             </Link>
             <SheetDescription className="sr-only">
               Navigation Menu
             </SheetDescription>
           </SheetHeader>
-          <ul className="flex flex-col gap-10 p-8 justify-center text-left">
+          <ul className="flex flex-col text-white font-bold gap-10 p-8 justify-center text-left">
             {links.map((link) => {
               return (
                 <li key={link.path}>
@@ -79,7 +77,7 @@ const NavMobile = () => {
                     onClick={() => setIsOpen(false)}
                     className={
                       activeSection === link.path.substring(1)
-                        ? "font-semibold text-accent-2"
+                        ? "text-accent-2"
                         : "hover:text-secondary"
                     }
                   >
@@ -89,7 +87,7 @@ const NavMobile = () => {
               );
             })}
             <div onClick={() => setIsOpen(false)}>
-              <Button text="Contact Us" variant="primary" href="#footer" />
+              <Button text="Contact us" variant="cta" href="#footer" />
             </div>
           </ul>
         </div>

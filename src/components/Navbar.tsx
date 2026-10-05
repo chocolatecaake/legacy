@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import NavMobile from "./NavMobile";
 import Button from "./Button";
 import { Star } from "lucide-react";

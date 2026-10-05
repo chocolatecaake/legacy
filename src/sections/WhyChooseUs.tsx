@@ -2,15 +2,14 @@
 
 import Image from "next/image";
 import Stat from "@/components/Stat";
-import { Smile } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
 
 export default function WhyUs() {
   const values = [
-    "All-Inclusive Programs",
-    "Enhanced Learning Resources",
-    "Creative Expression",
+    { desc: "All-Inclusive Programs", fill: "secondary" },
+    { desc: "Enhanced Learning Resources", fill: "accent" },
+    { desc: "Creative Expression", fill: "primary" },
   ];
 
   return (
@@ -54,7 +53,7 @@ export default function WhyUs() {
         </div>
         <div className="flex flex-col md:flex-row bg-white gap-default">
           {values.map((value, idx) => (
-            <Stat key={idx} Icon={Smile} desc={value} />
+            <Stat key={idx} fill={value.fill} desc={value.desc} />
           ))}
         </div>
       </motion.div>
