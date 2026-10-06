@@ -54,7 +54,12 @@ export default function Hero() {
           <Button text="Contact Us" href="#footer" />
         </div>
       </div>
-      <Image src="/assets/pop2.png" alt="hero image" height={600} width={600} />
+      <Image
+        src="/assets/heroImg.png"
+        alt="hero image"
+        height={600}
+        width={600}
+      />
     </section>
   );
 }
